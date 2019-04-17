@@ -1,0 +1,82 @@
+
+
+ /* navigation */
+
+
+  .realisation-caption .text-muted
+  {
+    color:black!important;
+  }
+
+  
+
+  
+ .nav-pills .nav-link.active
+ {
+  background:#a2015b;
+  opacity: 0.8;
+ }
+
+
+ .nav-pills .nav-link
+ {
+  color:black;
+ }
+ header.masthead
+ {
+   height:100vh;
+ 
+ } 
+
+ 
+ 
+
+.layoutB ul.social-buttons li a{
+  font-size: 30px;
+  line-height:1vh;
+  display: block;
+  width: 50px;
+  height: auto;
+ text-align: center;
+  color: white;
+
+
+}
+
+
+  
+
+.layoutB ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons li a:hover {
+  background-color: #a2015b;
+}
+
+
+.listUser,.formUser,.competenceUser,.realisationUser,.experienceUser,.formationUser,.profilUser,.competence,.realisation,.experience,.formation{
+  margin-top:100px;
+}
+
+.competence,.experience,.realisation,.formation,.listUser,.formUser,.formUserE,.competenceUser,.experienceUser,.realisationUser,.formationUser{
+  
+  background: white !important;
+
+
+  
+}
+
+
+
+.backoffice{
+  background-image: url("../img/back.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+.connection {
+  margin-bottom: 520px;
+}
+
+
+
+

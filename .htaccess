@@ -1,0 +1,24 @@
+### INTERDIRE LES AUTRES TYPES DE FICHIER INDEX
+<FilesMatch "^(index)\.(p?s?x?htm?|txt|aspx?|cfml?|cgi|pl|php[3-9]|jsp)$">
+<IfModule mod_authz_core.c>
+    Require all denied
+</IfModule>
+<IfModule !mod_authz_core.c>
+    Order deny,allow
+    Deny from all
+</IfModule>
+</FilesMatch>
+Options +FollowSymLinks -MultiViews
+#Options -Indexes
+<IfModule mod_rewrite.c>
+    RewriteEngine on
+    RewriteBase /SitePortFolio/
+    # Removes trailing slashes (prevents SEO duplicate content issues)
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.+)/$ $1 [L,R=301]
+    # Pass all requests not referring directly to files in the filesystem to index.php.
+    RewriteCond %{REQUEST_FILENAME} !(.*)\.(css|js|png|jpg)$
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]
+</IfModule>
